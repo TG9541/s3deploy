@@ -18,11 +18,10 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.TEBI_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.TEBI_SECRET_ACCESS_KEY }}
-          aws-region: us-west-2
 
       - name: Deploy to Tebi
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.TEBI_ACCESS_KEY_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.TEBI_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.TEBI_SECRET_ACCESS_KEY }}
         run: |
           aws s3 --endpoint-url https://s3.tebi.io sync ./content s3://www.7il.de
