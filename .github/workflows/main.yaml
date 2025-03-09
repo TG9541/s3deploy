@@ -1,4 +1,4 @@
-name: Deploy to Tebi
+name: Deploy to Tebi S3
 
 on:
   push:
