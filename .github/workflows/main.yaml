@@ -18,6 +18,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.TEBI_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.TEBI_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
 
       - name: Deploy to Tebi
         env:
