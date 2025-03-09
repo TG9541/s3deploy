@@ -15,6 +15,8 @@ jobs:
 
       - name: Deploy to Tebi
         env:
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
           AWS_ACCESS_KEY_ID: ${{ secrets.TEBI_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.TEBI_SECRET_ACCESS_KEY }}
         run: |
