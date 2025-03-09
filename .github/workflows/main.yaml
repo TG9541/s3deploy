@@ -11,14 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.TEBI_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.TEBI_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+        uses: actions/checkout@v1
 
       - name: Deploy to Tebi
         env:
